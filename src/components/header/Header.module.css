@@ -1,0 +1,19 @@
+.header{
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .10rem;
+    height: 10vh;
+}
+
+.header div{
+display: flex;
+align-items: center;
+gap:.25rem;
+border: solid yellow ;
+height:10vh;
+}
+.header img{
+    height: 100%;
+}
