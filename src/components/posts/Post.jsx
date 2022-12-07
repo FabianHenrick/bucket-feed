@@ -3,9 +3,19 @@ import style from './Post.module.css'
 export function Post(props){
 
     return (
-        <div className={style.postbox}>
-            <strong>{props.author}</strong>
-             <p>{props.coment}</p>
-        </div>
+
+        <article className={style.postbox}>
+            <header>
+                <div className={style.author}>
+                    <img className={style.avatar} src={props.avatarUrl}></img>
+                    <div className={style.authorInfo}>
+                        <strong>{props.author}</strong>
+                        <span> {props.descrip} </span>
+                    </div>
+                </div>
+                <time title="11 de maio as 08:13" dateTime="2022-05-11 08:13:30" >Publicado a 1h</time>
+            </header>
+            <p className={style.coment}>{props.coment}</p>
+        </article>
     )
 }
