@@ -44,3 +44,47 @@ margin-top: 1.5rem;
     border-radius: 8px;
     width:50px
 }
+.commentForm{
+
+    width:100%;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #323238;
+}
+.commentForm strong{
+line-height: 1.6;
+color:#C4C4CC;
+}
+.commentForm textarea{
+    width: 100%;
+    background: #121214;
+    border: 0;
+    resize: none;
+    height: 6rem;
+    padding: 1rem;
+    border-radius: 8px;
+    color:#C4C4CC;
+    line-height: 1.4;
+    margin-top: 1rem;;
+}
+.commentForm button[type=submit]{
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    background: #00875f ;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.1s;
+    display: none;
+    max-height: 0;
+}
+
+.commentForm:focus-within button{
+    display:inline;
+    max-height: none;
+}
+.commentForm button[type=submit]:hover {
+    background: #00B37E;
+}
