@@ -12,8 +12,8 @@ export function Comment(){
                             <strong>Fabian Henrick</strong>
                             <time title='8 de março de 2022'>cerca de 4 horas atrás</time>
                         </div>
-                        <button tittle ="Deletar">
-                            <Trash size={20}/>
+                        <button title ="Deletar">
+                            <Trash size={24}/>
                         </button>
                     </header>
                     <p> O Puntel me mamou!</p>
