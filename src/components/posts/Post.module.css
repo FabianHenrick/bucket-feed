@@ -88,3 +88,6 @@ color:#C4C4CC;
 .commentForm button[type=submit]:hover {
     background: #00B37E;
 }
+.commentList {
+    margin-top: 2rem;
+}
