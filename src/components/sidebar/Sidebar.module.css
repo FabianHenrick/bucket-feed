@@ -61,3 +61,13 @@
     background: #00875f;
     color: white;
 }
+@media(max-width:768px) {
+
+    html{
+        font-size:87,5%;
+    }
+
+    .sidebar{
+        width: 100%
+    }
+}
