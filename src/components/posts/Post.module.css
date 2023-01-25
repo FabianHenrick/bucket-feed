@@ -1,9 +1,9 @@
-.postbox{
+.post{
     padding:20px;
     background: #202024;
     border-radius: 8px;
 }
-.postbox + .postbox{
+.post + .post{
 margin-top: 2rem;
 }
 .comment{
@@ -13,12 +13,12 @@ font-size: 1rem;
 margin-top: 1.5rem;
 }
 
-.postbox header, time{
+.post header, time{
     color:#8D8D99;
     display: flex;
     justify-content: space-between;
 }
-.postbox time{
+.post time{
     color:#8D8D99;
     font-size: 0.875rem;
 }

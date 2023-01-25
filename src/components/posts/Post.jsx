@@ -6,17 +6,15 @@ export function Post(props){
 
     return (
 
-        <article className={style.postbox}>
+        <article className={style.post}>
             <header>
                 <div className={style.author}>
                     <Avatar
                         src="https://github.com/JohnLDev.png"
                         hasBorder={true}
-                        alt=""
-
                      />
                     <div className={style.authorInfo}>
-                        <strong>{props.author}</strong>
+                        <strong>Nome Genérico</strong>
                         <span> {props.descrip} </span>
                     </div>
                 </div>
