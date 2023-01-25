@@ -1,5 +1,6 @@
 import style from './Post.module.css'
 import {Comment} from '../comment/Comment'
+import {Avatar} from '../avatar/Avatar'
 
 export function Post(props){
 
@@ -8,7 +9,12 @@ export function Post(props){
         <article className={style.postbox}>
             <header>
                 <div className={style.author}>
-                    <img className={style.avatar} src={props.avatarUrl}></img>
+                    <Avatar
+                        src="https://github.com/JohnLDev.png"
+                        hasBorder={true}
+                        alt=""
+
+                     />
                     <div className={style.authorInfo}>
                         <strong>{props.author}</strong>
                         <span> {props.descrip} </span>
