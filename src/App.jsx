@@ -21,7 +21,7 @@ const posts=[
   },
   {id:2,
     author: {
-      avatarUrl: 'https://github.com/JohnLDev.png',
+      avatarUrl: 'https://pps.whatsapp.net/v/t61.24694-24/317657166_125363037088822_1837386508038471594_n.jpg?ccb=11-4&oh=01_AdQ7dxiOPvxqmhBujN906jjCs957tLXj-0MMmdG26FxGgw&oe=63E00777',
       name: 'Haniel Oliveira',
       role:'Corno Manso'
     },
