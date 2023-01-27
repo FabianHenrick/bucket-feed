@@ -7,7 +7,7 @@ import { LineSegment } from 'phosphor-react'
 import { useState } from 'react'
 
 const comments = [
-
+'O Puntel me mamou!'
 ]
 
 export function Post(props){
@@ -63,7 +63,7 @@ export function Post(props){
 
         <div className={style.commentList}>
             {comments.map(comment => {
-                return <Comment />
+                return <Comment content={comment} />
             })}
         </div>
 
