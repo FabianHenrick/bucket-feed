@@ -28,6 +28,8 @@ export function Post(props){
         setComments([...comments, comments.length+1])
     }
 
+ 
+    
     return (
 
         <article className={style.post}>
