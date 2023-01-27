@@ -4,15 +4,29 @@ import ptBR from 'date-fns/locale/pt-BR'
 import {Comment} from '../comment/Comment'
 import {Avatar} from '../avatar/Avatar'
 import { LineSegment } from 'phosphor-react'
+import { useState } from 'react'
+
+const comments = [
+
+]
 
 export function Post(props){
+     
+    const [comments,setComments] = useState([
 
+    ])
     const publishedDateFormatted = format( props.publishedAt ,"d 'de' LLLL 'ás' HH':'mm'h'", {locale:ptBR})
 
     const publishedDateRelativeToNow = formatDistanceToNow(props.publishedAt, { 
         locale:ptBR,
         addSuffix:true,
     })
+
+
+    function  handleCreateNewComment(){
+        event.preventDefault()
+        setComments([...comments, comments.length+1])
+    }
 
     return (
 
@@ -41,14 +55,16 @@ export function Post(props){
                 })}
             </div>
                
-        <form className={style.commentForm}>
+        <form onSubmit={handleCreateNewComment} className={style.commentForm}>
             <strong>Deixe seu Feedback</strong>
             <textarea placeholder="Deixe seu comentário"></textarea>
             <button type="submit">Comentar</button>
         </form>
 
         <div className={style.commentList}>
-            <Comment />
+            {comments.map(comment => {
+                return <Comment />
+            })}
         </div>
 
         </article>
