@@ -6,15 +6,12 @@ import {Avatar} from '../avatar/Avatar'
 import { LineSegment } from 'phosphor-react'
 import { useState } from 'react'
 
-const comments = [
-'O Puntel me mamou!'
-]
 
 export function Post(props){
      
     const [comments,setComments] = useState([
-        'o Puntel me mamou!'
     ])
+
     const publishedDateFormatted = format( props.publishedAt ,"d 'de' LLLL 'ás' HH':'mm'h'", {locale:ptBR})
 
     const publishedDateRelativeToNow = formatDistanceToNow(props.publishedAt, { 
@@ -22,12 +19,11 @@ export function Post(props){
         addSuffix:true,
     })
 
+
     const [newCommentText, setNewCommentText] = useState('')
 
     function  handleCreateNewComment(){
-       
         event.preventDefault()
-
         setComments([...comments, newCommentText])
         setNewCommentText('')
     }
@@ -36,6 +32,14 @@ export function Post(props){
         setNewCommentText(event.target.value)
     }
     
+    function deleteComment(commentToDelete){
+        const commentsWithoutDeletedOne = comments.filter(comment =>{
+            return comment !==  commentToDelete
+        })
+
+        setComments(commentsWithoutDeletedOne)
+    }
+
     return (
 
         <article className={style.post}>
@@ -50,7 +54,10 @@ export function Post(props){
                         <span> {props.author.role} </span>
                     </div>
                 </div>
-                <time title={publishedDateFormatted} dateTime="2022-05-11 08:13:30" >{publishedDateRelativeToNow} </time>
+                <time 
+                    title={publishedDateFormatted} 
+                    dateTime="2022-05-11 08:13:30" >{publishedDateRelativeToNow} 
+                </time>
             </header>
 
             <div className={style.comment}>
@@ -66,19 +73,22 @@ export function Post(props){
         <form onSubmit={handleCreateNewComment} className={style.commentForm}>
             <strong>Deixe seu Feedback</strong>
             <textarea 
-            name='input'
-            placeholder="Deixe seu comentário"
-            value={newCommentText}
-            onChange={handleNewCommentChange}></textarea>
-            <button type="submit">Comentar</button>
+                name='input'
+                placeholder="Deixe seu comentário"
+                value={newCommentText}
+                onChange={handleNewCommentChange}>
+            </textarea>
+                <button type="submit">Comentar</button>
         </form>
 
         <div className={style.commentList}>
             {comments.map(comment => {
-                return <Comment 
-                key={comment}
-                content={comment} />
-            })}
+                return ( 
+                <Comment 
+                    key={comment}
+                    content={comment}
+                    onDeleteComment={deleteComment} />
+            )})}
         </div>
 
         </article>
