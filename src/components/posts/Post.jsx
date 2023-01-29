@@ -13,7 +13,7 @@ const comments = [
 export function Post(props){
      
     const [comments,setComments] = useState([
-
+        'o Puntel me mamou!'
     ])
     const publishedDateFormatted = format( props.publishedAt ,"d 'de' LLLL 'ás' HH':'mm'h'", {locale:ptBR})
 
@@ -22,13 +22,19 @@ export function Post(props){
         addSuffix:true,
     })
 
+    const [newCommentText, setNewCommentText] = useState('')
 
     function  handleCreateNewComment(){
+       
         event.preventDefault()
-        setComments([...comments, comments.length+1])
+
+        setComments([...comments, newCommentText])
+        setNewCommentText('')
     }
 
- 
+    function handleNewCommentChange(){
+        setNewCommentText(event.target.value)
+    }
     
     return (
 
@@ -59,7 +65,11 @@ export function Post(props){
                
         <form onSubmit={handleCreateNewComment} className={style.commentForm}>
             <strong>Deixe seu Feedback</strong>
-            <textarea placeholder="Deixe seu comentário"></textarea>
+            <textarea 
+            name='input'
+            placeholder="Deixe seu comentário"
+            value={newCommentText}
+            onChange={handleNewCommentChange}></textarea>
             <button type="submit">Comentar</button>
         </form>
 
