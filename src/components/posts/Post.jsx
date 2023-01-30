@@ -19,8 +19,8 @@ export function Post(props){
         addSuffix:true,
     })
 
-
     const [newCommentText, setNewCommentText] = useState('')
+
 
     function  handleCreateNewComment(){
         event.preventDefault()
@@ -29,7 +29,13 @@ export function Post(props){
     }
 
     function handleNewCommentChange(){
+        event.target.setCustomValidity('')
         setNewCommentText(event.target.value)
+    }
+
+    function handleNewCommentInvalid(){
+        event.target.setCustomValidity('Este campo é obrigatório!')
+    
     }
     
     function deleteComment(commentToDelete){
@@ -39,7 +45,7 @@ export function Post(props){
 
         setComments(commentsWithoutDeletedOne)
     }
-
+const isNewCommentEmpty = newCommentText.length == 0;
     return (
 
         <article className={style.post}>
@@ -76,9 +82,15 @@ export function Post(props){
                 name='input'
                 placeholder="Deixe seu comentário"
                 value={newCommentText}
-                onChange={handleNewCommentChange}>
-            </textarea>
-                <button type="submit">Comentar</button>
+                onChange={handleNewCommentChange}
+                required
+                onInvalid={handleNewCommentInvalid}
+            ></textarea>
+                <button
+                     type="submit"
+                     disabled={isNewCommentEmpty}>
+                    Comentar
+                </button>
         </form>
 
         <div className={style.commentList}>
