@@ -24,7 +24,7 @@ interface postProps {
 
 export function Post(props:postProps){
      
-    const [comments,setComments] = useState([
+    const [comments,setComments] = useState<string[]>([
     ])
 
     const publishedDateFormatted = format( props.publishedAt ,"d 'de' LLLL 'ás' HH':'mm'h'", {locale:ptBR})
