@@ -4,7 +4,7 @@ import styles from './App.module.css'
 import { Header } from './components/header/Header'
 import{Sidebar} from './components/sidebar/Sidebar'
 import './global.css'
-import { Avatar } from './components/avatar/avatar'
+import { Avatar } from './components/avatar/Avatar'
 
 const posts=[
   {id:1,
