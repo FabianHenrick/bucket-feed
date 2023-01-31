@@ -6,8 +6,8 @@ import {Avatar} from '../avatar/Avatar'
 import { LineSegment } from 'phosphor-react'
 import { FormEvent, useState, ChangeEvent, InvalidEvent } from 'react'
 
-interface Content {
-    type: 'paragraph' | 'link'
+interface content {
+    type: string;
     content: string;
 }
 
@@ -18,7 +18,7 @@ interface postProps {
         avatarUrl: string;
     }
     publishedAt:Date;
-    content:Content[]
+    content: content[]
        
 }
 

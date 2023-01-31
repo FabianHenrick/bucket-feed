@@ -2,7 +2,13 @@ import styles from './Sidebar.module.css'
 import { PencilLine} from 'phosphor-react'
 import { Avatar } from '../avatar/Avatar'
 
-export function Sidebar(props){
+interface sidebarProps {
+    coverUrl:string;
+    user:string;
+    descrip:string;
+}
+
+export function Sidebar(props:sidebarProps){
     return(
         <aside className={styles.sidebar}>
             <img className={styles.cover} src={props.coverUrl}></img>

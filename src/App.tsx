@@ -1,12 +1,11 @@
-import { useState } from 'react'
+
 import { Post } from './components/posts/Post'
 import styles from './App.module.css'
 import { Header } from './components/header/Header'
 import{Sidebar} from './components/sidebar/Sidebar'
 import './global.css'
-import { Avatar } from './components/avatar/Avatar'
 
-const posts=[
+let posts=[
   {id:1,
     author: {
       avatarUrl: 'https://github.com/JohnLDev.png',
@@ -16,6 +15,7 @@ const posts=[
     content: [
      { type:'paragraph', content: 'Quase esqueci de dar, boa noite!🤤',},
      { type:'paragraph', content: 'Lembrando que minhas fotos com a Tigresa Vip estão com desconto.'},
+     { type: 'link', content: '#OnlyJonh #Packs'}
     ],
     publishedAt:new Date('2023-01-15 20:00:00'),
   },
