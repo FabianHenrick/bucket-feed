@@ -10,25 +10,25 @@ let posts=[
     author: {
       avatarUrl: 'https://github.com/JohnLDev.png',
       name: 'John Lenon',
-      role:'Only Fans Artist'
+      role:'Tech Lead'
     },
     content: [
-     { type:'paragraph', content: 'Quase esqueci de dar, boa noite!🤤',},
-     { type:'paragraph', content: 'Lembrando que minhas fotos com a Tigresa Vip estão com desconto.'},
-     { type: 'link', content: '#OnlyJonh #Packs'}
+     { type:'paragraph', content: 'Quase esqueci de dar boa noite!🤤',},
+     { type:'paragraph', content: 'Desde quando comecei a estudar quase não tenho tempo pra dormir.'},
+     { type: 'link', content: '#GoodNight #Estudando'}
     ],
-    publishedAt:new Date('2023-01-15 20:00:00'),
+    publishedAt:new Date('2024-08-15 20:00:00'),
   },
   {id:2,
     author: {
-      avatarUrl: 'https://pps.whatsapp.net/v/t61.24694-24/317657166_125363037088822_1837386508038471594_n.jpg?ccb=11-4&oh=01_AdQ7dxiOPvxqmhBujN906jjCs957tLXj-0MMmdG26FxGgw&oe=63E00777',
+      avatarUrl: 'https://media.licdn.com/dms/image/D4D03AQEX3Uy23j00Hw/profile-displayphoto-shrink_200_200/0/1691893253444?e=2147483647&v=beta&t=fPutQZg3ehX0ifesaPY15oZWneYm8Zg-UrG9XG3cyS8',
       name: 'Haniel Oliveira',
-      role:'Corno Manso'
+      role:'Auxiliar de TI'
     },
     content: [
-     { type:'paragraph', content: 'Não aguento mais trabalhar com transporte de madeira, ontem tive que levar tora até em Joá😫',},
+     { type:'paragraph', content: 'Passei o dia pedindo pra desligarem e religuarem o roteador novamente😫',},
     ],
-    publishedAt:new Date('2023-01-10 20:00:00'),
+    publishedAt:new Date('2024-07-10 20:00:00'),
   },
   {id:3,
     author: {
@@ -37,9 +37,9 @@ let posts=[
       role:'Full-Stack Developer'
     },
     content: [
-     { type:'paragraph', content: 'Cansei de Engulir tanta porra calado 😡',},
+     { type:'paragraph', content: 'Alguém sabe algum roadmap bom pra desenvolvedor front-end?'},
     ],
-    publishedAt:new Date('2023-01-09 20:00:00'),
+    publishedAt:new Date('2024-08-09 20:00:00'),
   },
 ];
 
